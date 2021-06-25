@@ -25,6 +25,8 @@ project(dslam)
 cmake_minimum_required(VERSION 2.8.3)
 
 find_package(catkin_simple REQUIRED)
+find_package(OpenCV 3.2 REQUIRED EXACT)
+
 catkin_simple(ALL_DEPS_REQUIRED)
 
 add_definitions(-O3)
@@ -37,7 +39,7 @@ cs_add_library(${PROJECT_NAME} src/kitti_parser.cpp
                                src/verify_geometry.cpp)
 
 cs_add_executable(dataset_to_vo src/dataset_to_vo.cpp)
-target_link_libraries(dataset_to_vo ${PROJECT_NAME})
+target_link_libraries(dataset_to_vo ${PROJECT_NAME} ${OpenCV_LIBS})
 
 cs_add_executable(batch_process_verification_request
                   src/batch_process_verification_request.cpp)
