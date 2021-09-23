@@ -26,6 +26,16 @@ cmake_minimum_required(VERSION 2.8.3)
 
 find_package(catkin_simple REQUIRED)
 catkin_simple(ALL_DEPS_REQUIRED)
+find_package(catkin REQUIRED
+    COMPONENTS
+        rpg_common
+        rpg_common_ros
+        ceres_catkin
+        orb_slam_2
+        DBoW2
+)
+
+include_directories(${CMAKE_CURRENT_BINARY_DIR} ${catkin_INCLUDE_DIRS})
 
 add_definitions(-O3)
 

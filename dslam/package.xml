@@ -40,4 +40,5 @@ along with dslam_open. If not, see <http://www.gnu.org/licenses/>.
   <depend>orb_slam_2</depend>
   <depend>rpg_common</depend>
   <depend>rpg_common_ros</depend>
+  <depend>DBoW2</depend>
 </package>

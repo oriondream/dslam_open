@@ -32,6 +32,8 @@
 #include <rpg_common/pose.h>
 #include <rpg_common_ros/visualize.h>
 
+#include <numeric>
+
 DEFINE_bool(step_ransac, false, "Step through ransac for debugging?");
 
 namespace dslam {
